@@ -21,19 +21,14 @@ function esc(s) { return String(s ?? "").replace(/[&<>"']/g, m => ({ "&": "&amp;
 year.textContent = new Date().getFullYear();
 
 async function fetchLiveProducts() {
-  try {
-        const response = await fetch('https://workers.dev');
-    const data = await response.json();
-    if (Array.isArray(data)) {
-      products = data;
-    } else {
-      products = starter;
+    try {
+        products = starter;
+    } catch (error) {
+        products = starter;
+        console.error(error);
     }
-  } catch (error) {
-    console.error(error);
-    products = starter;
+
   }
   if (typeof cats === 'function') cats();
-}
 
 fetchLiveProducts();
