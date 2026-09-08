@@ -1,5 +1,5 @@
 name = "sohoj-somadhan"
-main = "public/index.html"
+main = "src/worker.js" # এখানে আপনার মূল জাভাস্ক্রিপ্ট ফাইলের পাথ দিন (যেমন: src/worker.js বা index.js)
 compatibility_date = "2026-09-03"
 
 [[d1_databases]]
